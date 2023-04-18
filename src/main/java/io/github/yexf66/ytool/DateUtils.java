@@ -1,17 +1,69 @@
 package io.github.yexf66.ytool;
 
 import java.text.SimpleDateFormat;
+import java.util.Calendar;
 import java.util.Date;
 
 public class DateUtils {
     /**
-     * 格式化时间
+     * date format
      *
-     * @param date   传入时间
-     * @param format 格式化字符串
+     * @param date   string
+     * @param format format
      */
     public static String format(Date date, String format) {
         SimpleDateFormat sdf = new SimpleDateFormat(format);
         return sdf.format(date);
     }
+
+    /**
+     * add days
+     *
+     * @param date date
+     * @param num  day
+     */
+    public static Date addDays(Date date, int num) {
+        if (date == null) {
+            return null;
+        }
+        Calendar cal = Calendar.getInstance();
+        cal.setTime(date);
+        cal.add(Calendar.DATE, num);
+        return cal.getTime();
+    }
+
+    /**
+     * addHours
+     *
+     * @param date date
+     * @param num  hours
+     */
+    public static Date addHours(Date date, int num) {
+        if (date == null) {
+            return null;
+        }
+        Calendar calendar = Calendar.getInstance();
+        calendar.setTime(date);
+        calendar.add(Calendar.HOUR, num);
+        return calendar.getTime();
+    }
+
+
+    /**
+     * add minutes
+     *
+     * @param date date
+     * @param num  min
+     */
+    public static Date addMinutes(Date date, int num) {
+        if (date == null) {
+            return null;
+        }
+        Calendar calendar = Calendar.getInstance();
+        calendar.setTime(date);
+        calendar.add(Calendar.MINUTE, num);
+        return calendar.getTime();
+    }
+
+
 }
