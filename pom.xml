@@ -15,7 +15,7 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 
-    <name>yutil</name>
+    <name>ytool</name>
     <url>https://github.com/yexf66/ytool</url>
     <description>a java utils</description>
 
